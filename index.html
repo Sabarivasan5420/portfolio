@@ -1,0 +1,303 @@
+<!--
+  Personal Portfolio - index.html
+  - Clean, semantic, beginner-friendly structure
+  - Sections: Home, About, Skills, Projects, Education, Contact, Footer
+  - Links to `style.css` and `script.js`
+  - Replace placeholder links and text with your real info
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sabarivasan M — Data Analyst</title>
+  <!-- Google Fonts (free to use) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Site Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Home">Sabarivasan M</a>
+
+      <nav class="nav" id="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme toggle + Mobile menu button -->
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn icon-btn" aria-label="Toggle theme">🌗</button>
+        <button id="mobile-toggle" class="btn icon-btn mobile-toggle" aria-label="Toggle menu">☰</button>
+        <button id="profile-btn" class="btn profile-btn" aria-label="Profile">
+          <img src="IMG_3289.jpeg" alt="Profile" class="profile">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home / Hero -->
+  <main>
+    <section id="home" class="hero container reveal">
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="name">Sabarivasan M</span></h1>
+        <p class="role">Data Analyst</p>
+        <p class="tagline">Data-focused analyst skilled in statistical analysis, machine learning fundamentals, and visualization. I translate raw data into actionable insights using Python, SQL, Spark and BI tools.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <!-- Photo placeholder: replace the <img> src with your photo -->
+        <div class="hero-photo" aria-hidden="false">
+          <img src="IMG_3289.jpeg" alt="Sabarivasan photo" class="hero-photo__img">
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about container reveal">
+      <h2>About Me</h2>
+      <p>
+        Data analyst with a strong foundation in statistical methods, exploratory data analysis, and applied machine learning.
+        Experienced in cleaning and transforming data, designing experiments, and building end-to-end analysis pipelines that inform business decisions.
+        I combine technical rigor with clear communication to present insights and visualizations stakeholders can act on.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills container reveal">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-header"><span>Python (Pandas, NumPy, scikit-learn)</span><span class="skill-percent">Expert</span></div>
+          <div class="progress"><div class="progress-bar" data-percent="95" style="width:0%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header"><span>SQL / MySQL</span><span class="skill-percent">Proficient</span></div>
+          <div class="progress"><div class="progress-bar" data-percent="85" style="width:0%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header"><span>Machine Learning</span><span class="skill-percent">Intermediate</span></div>
+          <div class="progress"><div class="progress-bar" data-percent="75" style="width:0%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header"><span>Apache Spark</span><span class="skill-percent">Intermediate</span></div>
+          <div class="progress"><div class="progress-bar" data-percent="70" style="width:0%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header"><span>Data Visualization (PowerBI)</span><span class="skill-percent">Proficient</span></div>
+          <div class="progress"><div class="progress-bar" data-percent="80" style="width:0%"></div></div>
+        </div>
+      </div>
+      <p class="muted"><strong>Tools & Platforms:</strong> PowerBI · IBM SPSS Modeler · IBM Watson Studio · Apache Spark · Azure monitoring</p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="experience container reveal">
+      <h2>Experience</h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3>Web Development Intern — Zerame Infotech</h3>
+          <p class="muted">07/2025 — Coimbatore, India</p>
+          <p>Contributed to multiple web modules with a focus on usability and structure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects container reveal">
+      <h2>Projects</h2>
+      <p class="muted">A selection of projects demonstrating backend & frontend skills.</p>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="card-body">
+            <h3>Customer Feedback Management System</h3>
+            <p class="muted">Developed a system to collect, organize, and analyze user feedback in a structured manner.</p>
+            <ul class="tech">
+              <li>Data collection</li>
+              <li>Analysis</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-body">
+            <h3>Digital Twin — Predictive Maintenance for Solar Panels</h3>
+            <p class="muted">Built a digital twin to virtually model and monitor solar system performance for predictive maintenance.</p>
+            <ul class="tech">
+              <li>Digital twin</li>
+              <li>Predictive maintenance</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-body">
+            <h3>Product Sentiment Analysis</h3>
+            <p class="muted">Used machine learning and Apache Spark to analyze product reviews and classify them as positive, neutral, or negative. Implemented preprocessing, feature engineering and model evaluation at scale.</p>
+            <ul class="tech">
+              <li>Machine learning</li>
+              <li>Apache Spark</li>
+              <li>NLP</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+
+        
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="education container reveal">
+      <h2>Education</h2>
+      <p class="muted">Formal education and relevant coursework.</p>
+      <div class="projects-grid education-grid">
+        <article class="project-card">
+          <div class="card-body">
+            <img src="images%20(2).jpeg" alt="Malar mat Higher Secondary School" class="education-photo">
+            <h3>Malar mat Higher Secondary School</h3>
+            <p class="muted">Higher Secondary — Computer Science — 2022–2023</p>
+          </div>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-body">
+            <img src="images%20(3).jpeg" alt="M. Kumarsamy College of Engineering" class="education-photo">
+            <h3>M. Kumarsamy College of Engineering</h3>
+            <p class="muted">B.Tech — Artificial Intelligence &amp; Data Science (AIDS) — 2023–2027</p>
+            <ul class="tech">
+              <li>Relevant coursework: Data Structures, Machine Learning, Database Systems, IoT</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="certifications container reveal">
+      <h2>Certifications</h2>
+      <p class="muted">Project-based certificates and professional training.</p>
+      <div class="projects-grid certs-grid">
+        <article class="project-card">
+          <div class="card-body">
+            <img src="1736262702358.jpeg" alt="M. Kumarsamy College of Engineering" class="certificate-photo">
+            <h3>Ethical AI — Infosys</h3>
+            <p class="muted">Capstone on responsible ML and fairness-aware model evaluation.</p>
+            <ul class="tech">
+              <li>Responsible ML</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-body">
+            <img src="1748136558920.jpeg" alt="NPTEL Internet of Things certificate" class="certificate-photo">
+            <h3>NPTEL — Internet of Things (4.0)</h3>
+            <p class="muted">Hands-on IoT project involving sensor data collection and cloud integration.</p>
+          </div>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-body">
+            <img src="1764150579889.jpeg" alt="NPTEL The Joy of Computing certificate" class="certificate-photo">
+            <h3>NPTEL — The Joy of Computing using Python</h3>
+            <p class="muted">Project-based assignments demonstrating applied Python programming.</p>
+          </div>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-body">
+            <img src="1736241649821.jpeg" alt="Microsoft Azure monitoring certificate" class="certificate-photo">
+            <h3>Microsoft — Azure monitoring tools</h3>
+            <p class="muted">Familiarity with observability, metrics, logging and alerting.</p>
+          </div>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact container reveal">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form" aria-label="Contact form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn primary btn-submit">Send Message</button>
+          </div>
+          <div id="form-msg" role="status" aria-live="polite" class="muted"></div>
+        </form>
+
+        <div class="contact-info">
+          <p class="muted">Prefer email or phone? Reach out or find me online:</p>
+          <ul class="contact-list">
+            <li>Email: <a href="mailto:sabarivasan5420@gmail.com">sabarivasan5420@gmail.com</a></li>
+            <li>Phone: <a href="tel:+919994954205">+91 99949 54205</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/sabarivasan-m-38b323290" target="_blank" rel="noopener">linkedin.com/in/sabarivasan-m-38b323290</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Sabarivasan M. All rights reserved.</small>
+      <nav class="footer-nav">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Link to JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>

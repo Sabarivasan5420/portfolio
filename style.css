@@ -1,0 +1,191 @@
+/*
+  Personal Portfolio - style.css
+  - Modern light + dark theme using CSS variables
+  - Responsive layout and simple animations
+  - Beginner-friendly, well commented
+*/
+
+:root{
+  --bg: #ffffff;
+  --card: #f6f7fb;
+  --text: #0f1724;
+  --muted: #6b7280;
+  --accent: #6C63FF; /* primary accent */
+  --accent-2: #00BFA6;
+  --shadow: rgba(15, 23, 36, 0.08);
+}
+
+/* Dark theme overrides */
+body.dark{
+  --bg: #0b0f14;
+  --card: #0f1724;
+  --text: #e6eef6;
+  --muted: #9aa6b2;
+  --accent: #6C63FF;
+  --accent-2: #00BFA6;
+  --shadow: rgba(0,0,0,0.6);
+}
+
+/* Base styles */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:1.5rem}
+
+/* Header */
+.site-header{position:sticky;top:0;backdrop-filter:blur(6px);z-index:40;border-bottom:1px solid rgba(0,0,0,0.04);background:linear-gradient(to right,transparent,transparent)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+.logo{font-weight:700;font-family:Poppins, Inter, sans-serif;color:var(--text);text-decoration:none}
+.nav-list{list-style:none;padding:0;margin:0;display:flex;gap:1rem}
+.nav-list a{color:var(--muted);text-decoration:none;padding:0.35rem 0.5rem;border-radius:6px}
+.nav-list a:hover{color:var(--accent);background:rgba(108,99,255,0.06)}
+
+.header-controls{display:flex;align-items:center;gap:0.5rem}
+.btn{cursor:pointer;border:0;padding:0.5rem 0.7rem;border-radius:8px;background:transparent}
+.icon-btn{font-size:1rem}
+.mobile-toggle{display:none}
+
+/* Profile avatar (top-right) */
+.profile{width:40px;height:40px;object-fit:cover;border-radius:999px;display:block;border:2px solid rgba(0,0,0,0.06)}
+.profile-btn{padding:0;border-radius:999px;overflow:hidden}
+body.dark .profile{border-color:rgba(255,255,255,0.06)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 220px;align-items:center;gap:2rem;padding:5rem 0}
+.hero h1{font-size:2.25rem;margin:0}
+.hero .name{color:var(--accent)}
+.role{font-weight:600;color:var(--accent-2);margin:0.5rem 0}
+.tagline{color:var(--muted);max-width:55ch}
+.hero-cta{margin-top:1.25rem;display:flex;gap:0.75rem}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:0.6rem 0.9rem}
+.btn.outline{border:1px solid rgba(0,0,0,0.06);padding:0.5rem 0.9rem}
+
+/* Hero photo placeholder */
+.hero-photo{width:220px;height:220px;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px var(--shadow);background:linear-gradient(90deg,var(--accent),var(--accent-2));}
+.hero-photo__img{width:100%;height:100%;object-fit:cover;display:block;border-radius:14px;}
+
+/* Sections */
+section{padding:3rem 0}
+h2{margin:0 0 1rem 0;font-size:1.25rem}
+.muted{color:var(--muted)}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem}
+.skill{background:var(--card);padding:0.8rem;border-radius:10px;text-align:center;box-shadow:0 6px 18px var(--shadow);font-weight:600}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+
+/* Certificates: layout two-by-two on larger screens, stack on small screens */
+.certs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+@media (max-width:700px){
+  .certs-grid{grid-template-columns:1fr}
+}
+.project-card{background:var(--card);padding:1rem;border-radius:12px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s ease, box-shadow .25s ease;box-shadow:0 6px 18px var(--shadow)}
+.project-card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 18px 40px rgba(0,0,0,0.14)}
+.card-body h3{margin:0 0 0.25rem 0}
+.card-body .muted{font-size:0.95rem}
+.tech{display:flex;gap:0.5rem;list-style:none;padding:0;margin-top:0.75rem}
+.tech li{background:rgba(0,0,0,0.04);padding:0.25rem 0.5rem;border-radius:6px;font-size:0.85rem}
+.card-actions{display:flex;gap:0.5rem;margin-top:1rem}
+
+/* Education & Contact */
+.education-list{display:flex;flex-direction:column;gap:0.5rem}
+.contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.4rem}
+.contact-list a{color:var(--accent)}
+
+/* Education photo (school) */
+.education-photo{width:100px;height:100px;object-fit:cover;border-radius:8px;display:block;margin-bottom:0.6rem;box-shadow:0 8px 20px var(--shadow)}
+
+/* Certificate photo: match education sizing */
+.certificate-photo{width:100px;height:100px;object-fit:cover;border-radius:8px;display:block;margin-bottom:0.6rem;box-shadow:0 8px 20px var(--shadow)}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(0,0,0,0.04);padding:1rem 0;margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.footer-nav{display:flex;gap:0.75rem}
+.footer-nav a{text-decoration:none;color:var(--muted)}
+
+/* Reveal animation for elements on scroll */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease, transform .6s ease}
+.reveal.active{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:1.5rem;padding:3rem 0}
+  .hero-art{display:none}
+  .nav-list{display:none;position:absolute;right:1rem;top:64px;background:var(--card);padding:1rem;border-radius:8px;flex-direction:column;box-shadow:0 12px 40px var(--shadow)}
+  .nav-list.open{display:flex}
+  .mobile-toggle{display:inline-flex}
+}
+
+@media (max-width:480px){
+  .hero h1{font-size:1.5rem}
+  .hero .tagline{max-width:100%}
+}
+
+/* Nav active state */
+.nav-list a.active{ color:var(--accent); font-weight:600; background:rgba(108,99,255,0.06) }
+
+/* Skill cards and progress bars */
+.skill-card{background:var(--card);padding:0.9rem;border-radius:10px;box-shadow:0 8px 24px var(--shadow);transition:transform .3s ease}
+.skill-card:hover{transform:translateY(-6px)}
+.skill-header{display:flex;justify-content:space-between;font-weight:600;color:var(--muted);margin-bottom:0.5rem}
+.progress{background:rgba(0,0,0,0.04);height:10px;border-radius:999px;overflow:hidden}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0;transition:width 1s cubic-bezier(.2,.9,.2,1)}
+
+/* Project media */
+.project-media img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem}
+
+/* Contact form */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem;align-items:start}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.contact-form{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 8px 24px var(--shadow)}
+.form-group{display:flex;flex-direction:column;gap:0.35rem;margin-bottom:0.6rem}
+input,textarea{padding:0.6rem;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:transparent;color:var(--text);outline:none}
+input:focus,textarea:focus{box-shadow:0 6px 20px rgba(108,99,255,0.08);border-color:rgba(108,99,255,0.08)}
+.btn-submit{display:block}
+#form-msg{min-height:1.25rem;margin-top:0.5rem;color:var(--accent)}
+
+/* Slight easing for interactive elements */
+.btn, .project-card, .skill-card{transition:all .25s ease}
+
+/* Small utility */
+.text-center{text-align:center}
+
+/* Interactive background: subtle animated gradient and mouse hotspot */
+:root{--mouse-x:50%;--mouse-y:50%}
+body.interactive-bg::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(108,99,255,0.10), transparent 15%),
+    linear-gradient(120deg, rgba(108,99,255,0.04), rgba(0,191,166,0.03));
+  mix-blend-mode:screen;
+  transition:background-position .15s ease;
+  animation:bgShift 14s linear infinite;
+}
+@keyframes bgShift{
+  0%{filter:hue-rotate(0deg) saturate(1)}
+  50%{filter:hue-rotate(30deg) saturate(1.05)}
+  100%{filter:hue-rotate(0deg) saturate(1)}
+}
+
+/* Advanced canvas background */
+.bg-canvas{position:fixed;inset:0;z-index:-2;pointer-events:none;display:block}
+/* When advanced background active, hide the simpler interactive pseudo-layer */
+body.advanced-bg .interactive-bg::before{opacity:0}
+
+/* End of styles */
